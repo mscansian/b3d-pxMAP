@@ -1,0 +1,3 @@
+- Corrigir FALHAS nos brushes MAPA1
+- Pensar em algum modo de diminuir r_speeds
+- shadows

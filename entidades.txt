@@ -1,0 +1,80 @@
+//Propriedades que NUNCA devem ser utilizadas: executed, on_execution, open, pivot
+
+//& = Entidades BRUSHBASED
+//% = Entidades POINTBASED
+//# = Propriedade Dinâmica (ex: action#1, action#2, action#3)
+
+@PROPRIEDADES PARA TODAS ENTIDADES BRUSHBASED
+- alpha : seta o alpha da entidade
+
+@PROPRIEDADES PARA TODAS ENTIDADES POINTBASED
+- origin : posição da entidade
+
+&WORLDSPAWN (todo o mundo)
+- texture : path das texturas
+- sound : path dos sons
+
+%PLAYER_START (inicio do player)
+- angles : P Y R (angulo que o player nasce virado)
+
+&NULL (entidade nula)
+
+&DOOR (cria uma porta que desliza)
+- angles : P Y R (angulo que a porta abre)
+- name : nome da porta
+- sound : som ao abrir a porta
+- sound_stop : som quando a porta pára
+- delay : tempo que demora pra porta abrir depois do trigger
+
+&BUTTON (cria um botão)
+- action# : entidade que o botão aciona
+- repeat# : quantas vezes a entidade pode ser acionada
+
+&TRIGGER_MULTIPLE (cria um trigger invisivel que pode ser acionado várias vezes)
+- action# : entidade que o trigger aciona
+- repeat# : quantas vezes a entidade pode ser acionada
+- reset : tempo que demora para o trigger ser reutilizado
+
+&TRIGGER_ONCE (cria um trigger invisivel que somente pode ser acionado uma vez)
+- action# : entidade que o trigger aciona
+
+%SUBTITLE (mostra dialogos na tela)
+- name : nome do dialogo
+- text# : texto a ser exibido
+- person# : pessoa que fala (deixe em branco para ser ninguém)
+
+&HIDDEN (objeto escondido no jogo)
+
+&DOOR_ROTATING (porta giratoria)
+- name : nome da porta
+- rot_speed_pitch : Velocidade de rotação em PITCH
+- rot_speed_yaw : Velocidade de rotação em YAW
+- rot_speed_roll : Velocidade de rotação em ROLL
+- open_degrees_pitch : Abertura máxima em PITCH (sempre valor positivo)
+- open_degrees_yaw : Abertura máxima em YAW (sempre valor positivo)
+- open_degrees_roll : Abertura máxima em ROLL (sempre valor positivo)
+
+%MAP_AUTO (aciona entidades no carregamento do mapa)
+- action# : entidade que o trigger aciona
+
+------ TODO -------
+&@breakable
+%spawn_ammo
+%scripted_event (funciona como um multimanager só que usa action# delay# repeat#)
+%screen_fade
+%screen_shake
+%screen_text
+%sound
+%sprite
+%strip (tira munição/armas/itens do player)
+%map_changeproperty
+%map_changelevel
+%explosion
+%map_equip (diz as armas que o player começa)
+&ladder
+&passable (ou colocar isso como uma flag)
+
+
+fazer texturas transparentes
+colocar no SUBTITLE sound# (entidade de som), delay# (se delay for -1 ele espera o som terminar de tocar)
+colocar ABS nos valores de propriedades
