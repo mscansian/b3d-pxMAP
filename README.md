@@ -1,4 +1,4 @@
-pxMAP
+b3d-pxMAP
 =====
 Load .map (Valve Hammer Editor) files into Blitz3d primitives.
 
