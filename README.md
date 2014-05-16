@@ -1,9 +1,7 @@
 pxMAP
 =====
-
 Load .map (Valve Hammer Editor) files into Blitz3d primitives.
 
-Loader de arquivos .map (Valve Hammer Editor) em Blitz3D
 
 Features
 ---------
